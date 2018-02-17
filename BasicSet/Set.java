@@ -1,3 +1,7 @@
+/* Andrew Tek
+ * February 20, 2018
+ * CS 408 Raheja
+ */
 package BasicSet;
 
 import java.util.LinkedList;
@@ -5,6 +9,10 @@ import java.util.List;
 
 public class Set {
 	
+	/*
+	 * Combines and returns a new linked list that contains all nodes of list1
+	 * and list 2 without any duplicates.
+     */
 	public static List<String> union(List <String> list1, List <String> list2) {
 		List <String> solutionSet = new LinkedList<String>();
 		for (String str : list1) {
@@ -18,6 +26,9 @@ public class Set {
 		return solutionSet;
 	}
 	
+	/*
+	 * Returns new linked list of nodes that are in both list1 and list 2
+	 */
 	public static List<String> intersect (List <String> list1, List <String> list2) {
 		List <String> solutionSet = new LinkedList<String>();
 		for (String str : list1) {
@@ -27,7 +38,12 @@ public class Set {
 		}
 		return solutionSet;
 	}
-	
+
+	/*
+	 * Returns new linked list with only unique nodes from list1. Accomplished
+	 * by traversing list1 and only adding it to the solution list if it is not
+	 * in list2.
+	 */
 	public static List <String> difference(List <String> list1, List <String> list2) {
 		List <String> solutionSet = new LinkedList<String>();
 		for (String str : list1) {

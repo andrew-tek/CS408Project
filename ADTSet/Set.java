@@ -1,7 +1,15 @@
+/* Andrew Tek
+ * February 20, 2018
+ * CS 408 Raheja
+ */
 package ADTSet;
 
 public class Set {
 
+	/*
+	 * Combines and returns a new linked list that contains all nodes of list1
+	 * and list 2 without any duplicates.
+	 */
 	public static LinkedList union(LinkedList list1, LinkedList list2) {
 		LinkedList solution = new LinkedList();
 		Node iterator = list1.getHead();
@@ -19,7 +27,9 @@ public class Set {
 		}
 		return solution;
 	}
-	
+	/*
+	 * Returns new linked list of nodes that are in both list1 and list 2
+	 */
 	public static LinkedList intersection(LinkedList list1, LinkedList list2) {
 		LinkedList solution=  new LinkedList();
 		Node iterator = list1.getHead();
@@ -33,7 +43,11 @@ public class Set {
 		
 		return solution;
 	}
-	
+	/*
+	 * Returns new linked list with only unique nodes from list1. Accomplished
+	 * by traversing list1 and only adding it to the solution list if it is not
+	 * in list2.
+	 */
 	public static LinkedList difference (LinkedList list1, LinkedList list2) {
 		LinkedList solution = new LinkedList();
 		Node iterator = list1.getHead();
