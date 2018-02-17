@@ -20,8 +20,21 @@ public class Set {
 	
 	public static List<String> intersect (List <String> list1, List <String> list2) {
 		List <String> solutionSet = new LinkedList<String>();
-		
-		
+		for (String str : list1) {
+			if (list2.contains(str)) {
+				solutionSet.add(str);
+			}
+		}
+		return solutionSet;
+	}
+	
+	public static List <String> difference(List <String> list1, List <String> list2) {
+		List <String> solutionSet = new LinkedList<String>();
+		for (String str : list1) {
+			if (!list2.contains(str)) {
+				solutionSet.add(str);
+			}
+		}
 		return solutionSet;
 	}
 
@@ -39,7 +52,7 @@ public class Set {
 		listB.add("c");
 		listB.add("d");
 		
-		solution = union(listA, listB);
+		solution = difference(listA, listB);
 		
 		for (String str : solution) {
 			System.out.println(str);
